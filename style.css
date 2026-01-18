@@ -2,17 +2,14 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family: Arial;
 }
 
-/* NAV */
-header{
+/* NAVBAR */
+.top-nav{
 background:black;
 color:white;
-padding:20px 60px;
-}
-
-.nav{
+padding:20px 80px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -20,16 +17,16 @@ align-items:center;
 
 /* HERO */
 .hero{
-background:#4e6f8f;
+background:#4c6f8f;
 height:90vh;
 display:flex;
 align-items:center;
 padding-left:120px;
-color:#cfd9e3;
 }
 
-.hero-box{
+.hero-content{
 max-width:500px;
+color:#dbe5ef;
 }
 
 .hello{
@@ -40,29 +37,34 @@ font-size:14px;
 .hero h1{
 font-size:60px;
 margin:10px 0;
+color:#d3dde7;
 }
 
 .hero h3{
-font-size:28px;
-color:#e1e1e1;
+font-size:26px;
 }
 
-.role{
-font-size:20px;
-margin-bottom:30px;
+.sub{
+margin:15px 0 30px;
+font-size:18px;
 }
 
 .btn{
-background:#7aa2c2;
+background:#8fb2cc;
 color:white;
-padding:12px 25px;
+padding:12px 28px;
 text-decoration:none;
-border-radius:5px;
+border-radius:4px;
 }
 
 /* SECTIONS */
 .section{
 padding:80px 120px;
+text-align:left;
+}
+
+.gray{
+background:#f4f4f4;
 }
 
 .section h2{
@@ -73,7 +75,7 @@ margin-bottom:15px;
 /* SKILLS */
 .skills span{
 display:inline-block;
-background:#eee;
+background:white;
 padding:8px 18px;
 margin:6px;
 border-radius:20px;
@@ -95,7 +97,7 @@ color:#007bff;
 }
 
 /* CONTACT */
-#contact p{
+.section p{
 margin:10px 0;
 font-size:18px;
 }
