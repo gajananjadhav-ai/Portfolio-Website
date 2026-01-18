@@ -1,89 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Gajanan Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gajanan Jadhav | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --primary-color: #ffbd39;
+            --text-color: #ffffff;
+            --secondary-text: #999999;
+        }
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            position: fixed;
+            width: 84%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+
+        .logo { font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at 80% 20%, #1a1a1a 0%, #000000 100%);
+        }
+
+        .hello {
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 70px;
+            margin: 10px 0;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        h1 span { color: var(--primary-color); }
+
+        .role {
+            font-size: 28px;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .description {
+            color: var(--secondary-text);
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .btn-group { display: flex; gap: 20px; }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.4s;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #000;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary {
+            border: 2px solid #333;
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 189, 57, 0.2);
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<header class="top-nav">
-  <h2>Gajanan</h2>
-  <span>MENU</span>
-</header>
+    <nav>
+        <div class="logo">Gajanan Jadhav</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<section class="hero">
-
-  <div class="hero-content">
-
-    <p class="hello">HELLO!</p>
-
-    <h1>I'm Gajanan</h1>
-
-    <h3>Data Analyst</h3>
-
-    <p class="sub">
-      MIS Executive | Aspiring Data Engineer
-    </p>
-
-    <a href="#projects" class="btn">
-      MY WORKS
-    </a>
-
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-<h2>About Me</h2>
-<p>
-I am working as MIS Executive and learning Data Engineering.
-Passionate about SQL, analytics and building real projects.
-</p>
-</section>
-
-<!-- SKILLS -->
-<section class="section gray">
-<h2>Skills</h2>
-
-<div class="skills">
-<span>HTML</span>
-<span>CSS</span>
-<span>SQL</span>
-<span>Git</span>
-<span>GitHub</span>
-<span>Excel</span>
-</div>
-</section>
-
-<!-- PROJECT -->
-<section class="section">
-<h2>Projects</h2>
-
-<div class="card">
-<h3>Olist SQL Analysis</h3>
-<a target="_blank"
-href="https://github.com/gajananjadhav-ai">
-View on GitHub
-</a>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="section gray">
-<h2>Contact</h2>
-
-<p><i class="fa-solid fa-phone"></i> 8788515918</p>
-<p><i class="fa-solid fa-envelope"></i> jadhav.gajanan101@gmail.com</p>
-
-</section>
+    <section class="hero" id="home">
+        <p class="hello">HELLO!</p>
+        <h1>I'm <span>Gajanan<br>Jadhav</span></h1>
+        <p class="role">Junior Data Analyst & Spark Developer</p>
+        <p class="description">
+            Expertise in processing large-scale data with <strong>Spark 3.5.7</strong>. 
+            Transforming complex datasets into actionable business insights.
+        </p>
+        <div class="btn-group">
+            <a href="#projects" class="btn btn-primary">My Works</a>
+            <a href="tel:8788515918" class="btn btn-secondary">Hire Me</a>
+        </div>
+    </section>
 
 </body>
 </html>
