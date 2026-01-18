@@ -12,126 +12,103 @@
             --primary-color: #ffbd39;
             --text-color: #ffffff;
             --card-bg: #111111;
+            --sub-text: #999999;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Poppins', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
-
-        /* Navigation */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 10%; position: fixed; width: 100%; top: 0;
-            background: rgba(0, 0, 0, 0.9); z-index: 1000; border-bottom: 1px solid #222;
-        }
-        .logo { font-size: 22px; font-weight: 700; }
-        .nav-links a { color: #fff; text-decoration: none; margin-left: 25px; font-size: 14px; transition: 0.3s; }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Poppins', sans-serif; scroll-behavior: smooth; line-height: 1.6; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 0 10%; height: 80px; position: fixed; width: 100%; top: 0; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #222; }
+        .logo { font-size: 24px; font-weight: 700; }
+        .nav-links a { color: var(--text-color); text-decoration: none; margin-left: 25px; font-size: 14px; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary-color); }
-
         section { padding: 100px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-        .section-title { font-size: 40px; margin-bottom: 50px; text-align: center; font-weight: 700; }
+        .section-title { font-size: 45px; margin-bottom: 50px; text-align: center; font-weight: 700; }
         .section-title span { color: var(--primary-color); }
-
-        /* Hero Section */
-        .hero h1 { font-size: 65px; line-height: 1.1; margin: 15px 0; }
+        .hero h1 { font-size: clamp(40px, 8vw, 70px); line-height: 1.1; margin: 15px 0; font-weight: 800; }
         .hero h1 span { color: var(--primary-color); }
-        .hero .role { font-size: 24px; color: #ccc; margin-bottom: 30px; }
-
-        /* About Section (Sejal Style) */
-        .about-container { display: flex; flex-wrap: wrap; gap: 50px; align-items: flex-start; }
-        .personal-info { flex: 1; min-width: 300px; border-left: 3px solid var(--primary-color); padding-left: 20px; }
+        .about-container { display: flex; flex-wrap: wrap; gap: 50px; }
+        .personal-info { flex: 1; min-width: 300px; border-left: 3px solid var(--primary-color); padding-left: 25px; }
         .personal-info p { margin-bottom: 15px; font-size: 16px; }
-        .personal-info span { color: var(--primary-color); font-weight: 600; width: 120px; display: inline-block; }
-
-        /* Skill Bars */
+        .personal-info span { color: var(--primary-color); font-weight: 600; width: 130px; display: inline-block; }
         .skill-item { margin-bottom: 20px; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
-        .progress-line { background: #222; height: 8px; border-radius: 10px; position: relative; width: 100%; }
-        .progress-line span { height: 100%; background: var(--primary-color); position: absolute; border-radius: 10px; transition: 1.5s; }
-
-        /* Timeline (Experience) */
-        .timeline { position: relative; border-left: 2px solid #222; padding-left: 30px; margin-left: 10px; }
+        .progress-line { background: #222; height: 10px; border-radius: 10px; position: relative; width: 100%; }
+        .progress-line span { height: 100%; background: var(--primary-color); position: absolute; border-radius: 10px; animation: slideIn 2s ease-out forwards; }
+        @keyframes slideIn { from { width: 0; } }
+        .timeline { position: relative; border-left: 2px solid #222; padding-left: 35px; margin-left: 10px; }
         .timeline-item { position: relative; margin-bottom: 40px; }
-        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 5px; width: 12px; height: 12px; background: var(--primary-color); border-radius: 50%; }
-        .timeline-content { background: var(--card-bg); padding: 25px; border-radius: 10px; }
-
-        /* Buttons */
-        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 12px 25px; border-radius: 50px; text-decoration: none; color: #fff; border: 2px solid #333; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
+        .timeline-item::before { content: ''; position: absolute; left: -42px; top: 5px; width: 14px; height: 14px; background: var(--primary-color); border-radius: 50%; box-shadow: 0 0 10px var(--primary-color); }
+        .timeline-content { background: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid #222; }
+        .btn { padding: 12px 25px; border-radius: 50px; text-decoration: none; color: #fff; border: 2px solid #333; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; }
         .btn-primary { background: var(--primary-color); color: #000; border: none; }
-        .btn:hover { transform: translateY(-3px); border-color: var(--primary-color); }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo">Gajanan Jadhav</div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#experience">Experience</a>
+            <a href="#resume">Education & Exp</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <p style="color:var(--primary-color); letter-spacing:3px;">HELLO!</p>
+    <section id="home">
+        <p style="color:var(--primary-color); letter-spacing:4px; font-weight:600;">HELLO!</p>
         <h1>I'm <span>Gajanan Jadhav</span></h1>
-        <p class="role">MIS Executive | Aspiring Data Engineer</p>
-        <div class="btn-group">
+        <p style="font-size: 26px; color: #ccc;">MIS Executive | Aspiring Data Engineer</p>
+        <div style="margin-top: 30px; display: flex; gap: 15px;">
             <a href="#projects" class="btn btn-primary">My Works</a>
             <a href="tel:8788515918" class="btn"><i class="fa-solid fa-phone"></i></a>
             <a href="mailto:jadhav.gajanan101@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#" class="btn" onclick="alert('Resume Coming Soon!')"><i class="fa-solid fa-file-pdf"></i> Resume</a>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" style="background-color: #050505;">
         <h2 class="section-title">About <span>Me</span></h2>
         <div class="about-container">
             <div class="personal-info">
                 <p><span>Name:</span> Gajanan Jadhav</p>
-                <p><span>Job Role:</span> MIS Executive</p>
+                <p><span>Education:</span> B.Sc. (Maths & CS)</p>
+                <p><span>Role:</span> MIS Executive</p>
                 <p><span>Experience:</span> 3 Years</p>
-                <p><span>Address:</span> Pune, India</p>
                 <div style="margin-top: 30px;">
-                    <div class="skill-item">
-                        <div class="skill-info"><span>SQL / PostgreSQL</span><span>90%</span></div>
-                        <div class="progress-line"><span style="width: 90%;"></span></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Apache Spark 3.5.7</span><span>85%</span></div>
-                        <div class="progress-line"><span style="width: 85%;"></span></div>
-                    </div>
+                    <div class="skill-item"><span>SQL | Spark 3.5.7</span><div class="progress-line"><span style="width: 90%;"></span></div></div>
+                    <div class="skill-item"><span>Python | Snowflake</span><div class="progress-line"><span style="width: 80%;"></span></div></div>
+                    <div class="skill-item"><span>AWS | Pandas | Excel</span><div class="progress-line"><span style="width: 75%;"></span></div></div>
                 </div>
             </div>
-            <div style="flex: 2; color: #999; line-height: 1.8;">
-                <p>I am a dedicated MIS Executive with 3 years of experience in data reporting and analysis using SQL. Currently, I am evolving into a Data Engineer, mastering Spark 3.5.7 to build scalable data pipelines.</p>
+            <div style="flex: 2; color: var(--sub-text); font-size: 18px;">
+                <p>Experienced <strong>MIS Executive</strong> with 3 years of expertise in SQL-driven data management. Currently pursuing <strong>Data Engineering</strong> with a certification from <strong>TuteDude</strong>. Proficient in building pipelines using <strong>Apache Spark 3.5.7</strong>.</p>
             </div>
         </div>
     </section>
 
-    <section id="experience">
-        <h2 class="section-title">Work <span>Experience</span></h2>
+    <section id="resume">
+        <h2 class="section-title">Education & <span>Experience</span></h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3 style="color:var(--primary-color);">MIS Executive</h3>
-                    <p style="margin-bottom: 10px;">3 Years Experience</p>
-                    <p style="color:#999;">Extensively used SQL and PostgreSQL for data management and automated reporting to drive business decisions.</p>
+                    <p>Professional Experience (3 Years)</p>
+                    <p style="color:var(--sub-text);">Utilized SQL and PostgreSQL for reporting and large-scale data analysis.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 style="color:var(--primary-color);">Data Engineering Certificate</h3>
+                    <p>TuteDude</p>
+                    <p style="color:var(--sub-text);">Intensive training in Data Engineering tools and methodologies.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 style="color:var(--primary-color);">Bachelor of Science</h3>
+                    <p>Mathematics & Computer Science</p>
+                    <p style="color:var(--sub-text);">Foundational degree covering core logic and computer systems.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="projects">
-        <h2 class="section-title">My <span>Projects</span></h2>
-        <div class="timeline-content">
-            <h3>Olist SQL Project</h3>
-            <p style="color:#999; margin: 10px 0;">E-commerce analysis using SQL to find business trends.</p>
-            <a href="https://github.com/gajananjadhav-ai/olist-sql-project" target="_blank" style="color:var(--primary-color); text-decoration:none;">View on GitHub →</a>
-        </div>
-    </section>
-
 </body>
 </html>
