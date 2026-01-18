@@ -1,157 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gajanan Jadhav | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* CSS Styling - Sejal Golam Style Reference */
-        :root {
-            --bg-color: #000000;
-            --card-bg: #111111;
-            --primary-color: #ffbd39; /* Yellow Highlight */
-            --text-color: #ffffff;
-            --sub-text: #999999;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-
-        /* Navigation */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 10%; position: fixed; width: 100%; top: 0;
-            background: rgba(0, 0, 0, 0.95); z-index: 1000; border-bottom: 1px solid #222;
-        }
-        .logo { font-size: 22px; font-weight: 700; color: var(--text-color); }
-        .nav-links a {
-            color: var(--text-color); text-decoration: none; margin-left: 25px;
-            font-size: 14px; font-weight: 500; transition: 0.3s;
-        }
-        .nav-links a:hover { color: var(--primary-color); }
-
-        /* Sections General */
-        section { padding: 100px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-        .section-title { font-size: 45px; margin-bottom: 50px; font-weight: 700; text-align: center; }
-        .section-title span { color: var(--primary-color); }
-
-        /* Hero Section */
-        .hero-content p { color: var(--primary-color); letter-spacing: 4px; font-weight: 600; margin-bottom: 10px; }
-        .hero-content h1 { font-size: 70px; line-height: 1.2; margin-bottom: 20px; }
-        .hero-content h1 span { color: var(--primary-color); }
-        .hero-content .title-desc { font-size: 24px; color: var(--text-color); margin-bottom: 30px; }
-
-        /* Skill Progress Bars */
-        .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; width: 100%; }
-        .skill-box { margin-bottom: 20px; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
-        .progress-bar { background: #222; height: 8px; border-radius: 10px; overflow: hidden; }
-        .progress { background: var(--primary-color); height: 100%; border-radius: 10px; transition: 1.5s ease-in-out; }
-
-        /* Project Cards */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .project-card { 
-            background: var(--card-bg); padding: 40px; border-radius: 15px; 
-            border: 1px solid #222; transition: 0.4s; position: relative; overflow: hidden;
-        }
-        .project-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
-        .project-card h3 { margin-bottom: 15px; font-size: 22px; }
-        .project-card p { color: var(--sub-text); line-height: 1.6; margin-bottom: 20px; }
-        .project-link { color: var(--primary-color); text-decoration: none; font-weight: 600; font-size: 14px; }
-
-        /* Contact Buttons */
-        .btn-group { display: flex; gap: 15px; margin-top: 10px; }
-        .btn {
-            padding: 14px 28px; border-radius: 50px; text-decoration: none;
-            font-weight: 600; font-size: 13px; text-transform: uppercase;
-            transition: 0.3s; border: 2px solid #333; color: #fff;
-            display: inline-flex; align-items: center; gap: 10px;
-        }
-        .btn-primary { background-color: var(--primary-color); color: #000; border: none; }
-        .btn:hover { background: var(--primary-color); color: #000; transform: scale(1.05); }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 40px; }
-            .skills-container { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo">Gajanan Jadhav</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <section id="home">
-        <div class="hero-content">
-            <p>HELLO!</p>
-            <h1>I'm <span>Gajanan<br>Jadhav</span></h1>
-            <div class="title-desc">MIS Executive | Aspiring Data Engineer</div>
-            <div class="btn-group">
-                <a href="#projects" class="btn btn-primary">My Works</a>
-                <a href="tel:8788515918" class="btn"><i class="fa-solid fa-phone"></i></a>
-                <a href="mailto:jadhav.gajanan101@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" class="btn" onclick="alert('Resume Coming Soon!')"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+<section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-container">
+        <div class="personal-info">
+            <p><span>Name:</span> Gajanan Jadhav</p>
+            <p><span>Job Role:</span> MIS Executive | Aspiring Data Engineer</p>
+            <p><span>Experience:</span> Junior Analyst</p>
+            <p><span>Address:</span> Pune, India</p>
+            
+            <div style="margin-top: 30px;">
+                <div class="skill-item">
+                    <div class="skill-info"><span>SQL</span><span>90%</span></div>
+                    <div class="progress-line"><span style="width: 90%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Apache Spark 3.5.7</span><span>85%</span></div>
+                    <div class="progress-line"><span style="width: 85%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Python</span><span>80%</span></div>
+                    <div class="progress-line"><span style="width: 80%;"></span></div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section id="about" style="background-color: #050505;">
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="skills-container">
-            <div class="skill-box">
-                <div class="skill-info"><span>Apache Spark 3.5.7</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill-box">
-                <div class="skill-info"><span>SQL / PostgreSQL</span><span>90%</span></div>
-                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-box">
-                <div class="skill-info"><span>Python</span><span>80%</span></div>
-                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill-box">
-                <div class="skill-info"><span>Snowflake / AWS</span><span>75%</span></div>
-                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        <div class="about-description">
+            <p>
+                I am a dedicated <strong>MIS Executive</strong> and an <strong>Aspiring Data Engineer</strong> based in Pune.
+                I specialize in managing complex datasets and building efficient data pipelines. 
+                Currently, I am working extensively with <strong>Apache Spark 3.5.7</strong>, 
+                leveraging its power to process large-scale data and derive actionable business insights.
+            </p>
+            <p>
+                My technical toolkit includes <strong>PostgreSQL, Snowflake, and AWS</strong>. 
+                I am passionate about transforming raw data into structured assets that drive strategic decision-making.
+            </p>
+            <div style="margin-top: 20px;">
+                <a href="#" class="btn btn-primary" onclick="alert('Resume Coming Soon!')">Download CV</a>
             </div>
         </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title">My <span>Projects</span></h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Olist SQL Project</h3>
-                <p>E-commerce data analysis using PostgreSQL to identify sales trends and customer behavior.</p>
-                <a href="https://github.com/gajananjadhav-ai/olist-sql-project" target="_blank" class="project-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="project-card">
-                <h3>Spark Data Pipeline</h3>
-                <p>Building scalable data processing pipelines using Apache Spark 3.5.7 for large datasets.</p>
-                <span style="color: #555; font-size: 12px;">IN PROGRESS</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="background-color: #050505; min-height: 50vh;">
-        <h2 class="section-title">Contact <span>Me</span></h2>
-        <div style="text-align: center;">
-            <p style="margin-bottom: 20px; color: var(--sub-text);">Let's connect and build something great together.</p>
-            <div class="btn-group" style="justify-content: center;">
-                <a href="tel:8788515918" class="btn btn-primary"><i class="fa-solid fa-phone"></i> 8788515918</a>
-                <a href="mailto:jadhav.gajanan101@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Email Me</a>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
+    </div>
+</section>
